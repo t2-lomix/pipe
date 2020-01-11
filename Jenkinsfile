@@ -1,12 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Build tar archive') {
-            steps {
-                echo 'Running build tar'
-                sh 'cd web227/ && tar -cvzf web227.tar.gz index.html pic8.jpg.jpg && cd .. && cd web327/ && tar -cvzf web327.tar.gz index.html pic8.jpg.jpg'
-            }
-        }
         stage('DeployToWeb227') {
             when {
                 branch 'master'
@@ -21,16 +15,15 @@ pipeline {
                                 configName: 'web227',
                                 transfers: [
                                     sshTransfer(
-                                        sourceFiles: 'web227/web227.tar.gz',
+                                        sourceFiles: 'web227/index.html',
                                         removePrefix: 'web227/',
-                                        remoteDirectory: '/tmp/',
+                                        remoteDirectory: '/var/www/html',
                                         execCommand: "pwd && ls -la /tmp && ls -la /var/www/html"
                                     )
                                 ]
                             )
                         ]
                     )
-                fileOperations([fileUnTarOperation(filePath: '/tmp/web227.tar.gz', isGZIP: false, targetLocation: '/tmp/')])   
                 }
             }
         }
