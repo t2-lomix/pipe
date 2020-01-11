@@ -46,6 +46,7 @@ pipeline {
                                         sourceFiles: 'web327/*',
                                         removePrefix: 'web327/',
                                         remoteDirectory: '/var/www/html/',
+                                        execCommand: "pwd && ls -la /tmp && ls -la /var/www/html"
                                     )
                                 ]
                             )
