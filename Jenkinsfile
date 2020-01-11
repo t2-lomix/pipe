@@ -24,7 +24,7 @@ pipeline {
                                         sourceFiles: 'web227/web227.tar.gz',
                                         removePrefix: 'web227/',
                                         remoteDirectory: '/tmp/',
-                                        execCommand: 'tar -xvzf web227.tar.gz -C /var/www/html/ && sudo service httpd restart'
+                                        execCommand: 'hostname && pwd && tar -xvzf web227.tar.gz -C /var/www/html/ && sudo service httpd restart'
                                     )
                                 ]
                             )
