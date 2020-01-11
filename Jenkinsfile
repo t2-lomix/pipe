@@ -43,10 +43,9 @@ pipeline {
                                 configName: 'web327',
                                 transfers: [
                                     sshTransfer(
-                                        sourceFiles: 'web327/web327.tar.gz',
+                                        sourceFiles: 'web327/*',
                                         removePrefix: 'web327/',
                                         remoteDirectory: '/var/www/html/',
-                                        execCommand: 'tar -xvzf web327.tar.gz -C /var/www/html && sudo service httpd restart'
                                     )
                                 ]
                             )
