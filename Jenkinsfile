@@ -24,7 +24,8 @@ pipeline {
                                         sourceFiles: 'web227/web227.tar.gz',
                                         removePrefix: 'web227/',
                                         remoteDirectory: '/tmp/',
-                                        execCommand: 'sleep 5 && tar -xvzf web327.tar.gz && sudo service httpd restart'
+                                        execCommand: 'tar -xvzf web327.tar.gz && sudo service httpd restart',
+                                        execTimeout: 1800000
                                     )
                                 ]
                             )
