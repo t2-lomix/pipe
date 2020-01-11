@@ -21,7 +21,7 @@ pipeline {
                                 configName: 'web227',
                                 transfers: [
                                     sshTransfer(
-                                        sourceFiles: 'web227/web227.tar.gz',
+                                        sourceFiles: '**',
                                         removePrefix: 'web227/',
                                         remoteDirectory: '/tmp/',
                                         execCommand: 'hostname && pwd && tar -xvzf web227.tar.gz -C /var/www/html/ && sudo service httpd restart'
