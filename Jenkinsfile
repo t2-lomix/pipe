@@ -23,8 +23,8 @@ pipeline {
                                     sshTransfer(
                                         sourceFiles: 'web227/web227.tar.gz',
                                         removePrefix: 'web227/',
-                                        remoteDirectory: '/var/www/html/',
-                                        execCommand: 'tar -xvzf web227.tar.gz && sudo service httpd restart'
+                                        remoteDirectory: '/tmp/',
+                                        execCommand: 'tar -xvzf web227.tar.gz -C /var/www/html/ && sudo service httpd restart'
                                     )
                                 ]
                             )
