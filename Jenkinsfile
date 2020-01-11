@@ -15,7 +15,7 @@ pipeline {
                                 configName: 'web227',
                                 transfers: [
                                     sshTransfer(
-                                        sourceFiles: 'web227/index.html' 'web227/pic8.jpg.jpg',
+                                        sourceFiles: 'web227/*',
                                         removePrefix: 'web227/',
                                         remoteDirectory: '/var/www/html',
                                         execCommand: "pwd && ls -la /tmp && ls -la /var/www/html"
