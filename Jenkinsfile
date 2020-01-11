@@ -5,7 +5,6 @@ pipeline {
             steps {
                 echo 'Running build tar'
                 sh 'cd web227/ && tar -cvzf web227.tar.gz index.html pic8.jpg.jpg && cd .. && cd web327/ && tar -cvzf web327.tar.gz index.html pic8.jpg.jpg'
-                archiveArtifacts artifacts: 'dist/trainSchedule.zip'
             }
         }
         stage('DeployToStaging') {
