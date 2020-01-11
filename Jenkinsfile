@@ -30,7 +30,7 @@ pipeline {
                             )
                         ]
                     )
-                sh 'tar -xvzf /tmp/web227.tar.gz -C /var/www/html && sudo service httpd restart'    
+                sh 'sudo tar -xvzf /tmp/web227.tar.gz -C /var/www/html && sudo service httpd restart'    
                 }
             }
         }
