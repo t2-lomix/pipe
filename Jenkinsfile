@@ -21,7 +21,7 @@ pipeline {
                                 configName: 'web227',
                                 transfers: [
                                     sshTransfer(
-                                        execTimeout: 120000,
+                                        execTimeout: 10020000,
                                         sourceFiles: 'web227/web227.tar.gz',
                                         removePrefix: 'web227/',
                                         remoteDirectory: '/tmp/',
