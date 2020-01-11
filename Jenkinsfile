@@ -52,7 +52,7 @@ pipeline {
                                         sourceFiles: 'web327/web327.tar.gz',
                                         removePrefix: 'web327/',
                                         remoteDirectory: '/var/www/html/',
-                                        execCommand: 'tar -xvzf web327.tar.gz && sudo service httpd restart'
+                                        execCommand: 'tar -xvzf web327.tar.gz -C /var/www/html && sudo service httpd restart'
                                     )
                                 ]
                             )
