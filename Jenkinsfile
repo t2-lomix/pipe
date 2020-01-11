@@ -21,8 +21,8 @@ pipeline {
                                 configName: 'web227',
                                 transfers: [
                                     sshTransfer(
-                                        sourceFiles: 'dist/web227.tar.gz',
-                                        removePrefix: 'dist/',
+                                        sourceFiles: 'web227/web227.tar.gz',
+                                        removePrefix: 'web227/',
                                         remoteDirectory: '/var/www/html/',
                                         execCommand: 'tar -xvzf web227.tar.gz && sudo service httpd restart'
                                     )
@@ -46,11 +46,11 @@ pipeline {
                         continueOnError: false,
                         publishers: [
                             sshPublisherDesc(
-                                configName: 'web227',
+                                configName: 'web327',
                                 transfers: [
                                     sshTransfer(
-                                        sourceFiles: 'dist/web327.tar.gz',
-                                        removePrefix: 'dist/',
+                                        sourceFiles: 'web327/web327.tar.gz',
+                                        removePrefix: 'web327/',
                                         remoteDirectory: '/var/www/html/',
                                         execCommand: 'tar -xvzf web327.tar.gz && sudo service httpd restart'
                                     )
