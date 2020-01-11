@@ -7,7 +7,7 @@ pipeline {
                 sh 'cd web227/ && tar -cvzf web227.tar.gz index.html pic8.jpg.jpg && cd .. && cd web327/ && tar -cvzf web327.tar.gz index.html pic8.jpg.jpg'
             }
         }
-        stage('DeployToStaging') {
+        stage('DeployToWeb227') {
             when {
                 branch 'master'
             }
@@ -33,7 +33,7 @@ pipeline {
                 }
             }
         }
-        stage('DeployToOneMoreServer') {
+        stage('DeployToWeb327') {
             when {
                 branch 'master'
             }
