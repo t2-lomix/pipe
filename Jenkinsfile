@@ -24,7 +24,7 @@ pipeline {
                                         sourceFiles: 'web227/web227.tar.gz',
                                         removePrefix: 'web227/',
                                         remoteDirectory: '/tmp/',
-                                        execCommand: "PWD && ls -la /tmp && ls -la /var/www/html"
+                                        execCommand: "pwd && ls -la /tmp && ls -la /var/www/html"
                                     )
                                 ]
                             )
