@@ -30,7 +30,7 @@ pipeline {
                             )
                         ]
                     )
-                fileOperations([fileUnTarOperation(filePath: '/tmp/web227.tar.gz', isGZIP: true, targetLocation: '/var/www/html/')])   
+                fileOperations([fileUnTarOperation(filePath: '/tmp/web227.tar.gz', isGZIP: true, targetLocation: '/tmp/')])   
                 }
             }
         }
